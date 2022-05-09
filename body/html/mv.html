@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        video {
+            width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button {
+            display: block;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        div {
+            width: 800px;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+
+        div li {
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <video controls src=""></video>
+    <button class="login">登录</button>
+    <div></div>
+</body>
+<script src="../js/base.js"> </script>
+<script src="../js/onload.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/alert.js"></script>
+<script>
+    let userCookie = ""
+    let commentPages = 0
+    let someComment = 0
+    addLoadEvent(() => {
+        let time = Date.now()
+        ajax({
+            type: "get",
+            url: "https://autumnfish.cn/top/mv",
+            data: {
+                timestamp: time,
+                limit:1
+            },
+            success: function (data, xhr) {
+                console.log(JSON.parse(data))
+                ajax({
+                    type: "get",
+                    url: "https://autumnfish.cn/mv/url",
+                    data: {
+                        timestamp: time,
+                        id: JSON.parse(data).data[0].id
+                    },
+                    success: function (data, xhr) {
+                        console.log(JSON.parse(data))
+                        q("video").src = JSON.parse(data).data.url
+                        // q("video").play()
+                    },
+                    error: function (data, xhr) {
+                        console.log(JSON.parse(data))
+                    }
+                })
+                // for (let i = 0; ; i++) {
+                //     ajax({
+                //         type: "get",
+                //         url: "https://autumnfish.cn/comment/mv",
+                //         data: {
+                //             timestamp: time,
+                //             id: JSON.parse(data).data[0].id,
+                //             limit: 100,
+                //             offset: 100
+                //         },
+                //         success: function (data, xhr) {
+                //             console.log(JSON.parse(data))
+                //         },
+                //         error: function (data, xhr) {
+                //             console.log(JSON.parse(data))
+                //         }
+                //     })
+                // }
+            },
+            error: function (data, xhr) {
+                console.log(JSON.parse(data))
+            }
+        })
+        q("button").onclick = function () {
+            ajax({
+                type: "get",
+                url: "http://localhost:3000/login/cellphone",
+                data: {
+                    timestamp: time,
+                    phone:"",
+                    password: ""
+                },
+                success: function (data, xhr) {
+                    console.log(JSON.parse(data))
+                    userCookie = JSON.parse(data).cookie.toString()
+                },
+                error: function (data, xhr) {
+                    console.log(JSON.parse(data))
+                }
+            })
+        }
+    })
+</script>
+
+</html>

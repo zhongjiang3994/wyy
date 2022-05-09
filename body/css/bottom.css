@@ -1,0 +1,58 @@
+.footer-wrapper-background {
+  border-top: 2px solid #a9a9a9;
+  width: 100vw;
+  min-width: 982px;
+  height: 172px;
+  background-color: rgba(242, 242, 242, 0.7);
+}
+.footer-wrapper-background .footer-wrapper {
+  width: 982px;
+  height: 172px;
+  margin: 0 auto;
+}
+.footer-wrapper-background .footer-wrapper .statement {
+  float: left;
+  width: 50%;
+  height: 103px;
+}
+.footer-wrapper-background .footer-wrapper .icon {
+  float: right;
+  width: 50%;
+  height: 103px;
+}
+.service {
+  padding: 10px;
+  line-height: 25px;
+}
+.service a {
+  font-size: 18px;
+  color: #999999;
+}
+.service span {
+  font-size: 18px;
+  margin: 8px;
+  position: relative;
+  top: -2px;
+  color: #c5c2c5;
+}
+.time {
+  padding-left: 10px;
+  font-size: 18px;
+  color: #666666;
+}
+.icon {
+  display: flex;
+  text-align: center;
+  padding-top: 10px;
+}
+.icon a {
+  flex: none;
+  width: 98.2px;
+  color: #939393;
+}
+.icon a i {
+  width: 98.2px;
+  display: block;
+  font-size: 50px;
+  color: #b1b1b1;
+}

@@ -1,0 +1,114 @@
+{
+  "id": "3270737",
+  "name": "huawei plus",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1360",
+      "name": "新浪微博",
+      "font_class": "xinlangweibo",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "77156",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "666888",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "2674476",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "4988481",
+      "name": "路由器-01",
+      "font_class": "luyouqi-",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "5044278",
+      "name": "平板",
+      "font_class": "pingban",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "5058403",
+      "name": "苹果耳机",
+      "font_class": "pingguoerji",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "5387752",
+      "name": "电脑_o",
+      "font_class": "diannao_o",
+      "unicode": "eb49",
+      "unicode_decimal": 60233
+    },
+    {
+      "icon_id": "7110934",
+      "name": "手环",
+      "font_class": "shouhuan",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "7275446",
+      "name": "VR",
+      "font_class": "VR",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    },
+    {
+      "icon_id": "11111311",
+      "name": "知乎",
+      "font_class": "zhihu",
+      "unicode": "e760",
+      "unicode_decimal": 59232
+    },
+    {
+      "icon_id": "16215419",
+      "name": "头条",
+      "font_class": "toutiao",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "19620960",
+      "name": "智慧屏",
+      "font_class": "zhihuiping",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "27139030",
+      "name": "鸿蒙OS",
+      "font_class": "hongmengOS",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "27402561",
+      "name": "领英",
+      "font_class": "lingying",
+      "unicode": "ee48",
+      "unicode_decimal": 61000
+    }
+  ]
+}

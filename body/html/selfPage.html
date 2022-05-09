@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/selfPage.css">
+    <link rel="stylesheet" href="../css/bottom.css">
+    <link rel="stylesheet" href="../css/selfPageTop.css">
+</head>
+
+<body>
+    <header>
+        <nav class="top-bar-wrapper">
+            <div class="top-bar-wrapper-background"></div>
+            <!-- 头部导航栏 -->
+            <div class="top-bar">
+                <h1 class="logo"></h1>
+                <ul class="menus-wrapper">
+                    <li class="find-music"><a href="./findMusic-recommend.html">发现音乐</a></li>
+                    <!-- 跳转个人主页 -->
+                    <li class="self-Page"><a class="selfPage" href="javascript:;">个人主页</a></li>
+                    <li><a href="javascript:;">商城</a></li>
+                    <li><a href="javascript:;">音乐人</a></li>
+                    <li class="download">
+                        <a href="javascript:;">下载客户端</a>
+                        <!-- 隐藏二维码 -->
+                        <div class="code">
+                            <img src="https://p1.music.126.net/wCRnpjXHpGRiq1c1uCkIFQ==/109951164246717547.png" >
+                            <div>扫码下载</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="visitor">
+                    <div class="input-wrapper">
+                        <div class="search-box">
+                            <input type="text" class="search-input">
+                            <a href="#" class="search-btn">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <div class="searchResultWrapper">
+                            <ul class="songResultWrapper">
+                                <li class="resultHead">
+                                    单曲
+                                </li>
+                                <li class="resultBody">
+                                    <a href="javascript:;" class="songResult"></a>
+                                    <a href="javascript:;" class="songResult"></a>
+                                    <a href="javascript:;" class="songResult"></a>
+                                    <a href="javascript:;" class="songResult"></a>
+                                </li>
+                            </ul>
+                            <ul class="singerResultWrapper">
+                                <li class="resultHead">
+                                    歌手
+                                </li>
+                                <li class="resultBody">
+                                    <a href="javascript:;" class="singerResult"></a>
+                                    <a href="javascript:;" class="singerResult"></a>
+                                </li>
+                            </ul>
+                            <ul class="albumResultWrapper">
+                                <li class="resultHead">
+                                    专辑
+                                </li>
+                                <li class="resultBody">
+                                    <a href="javascript:;" class="albumResult"></a>
+                                    <a href="javascript:;" class="albumResult"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 隐藏菜单开关 -->
+                    <div id="avatar" class="avatar">
+                        <span id="login">登录</span>
+                        <img id="userAvatar">
+                    </div>
+                </div>
+            </div>
+            <div class="top-bar-bottom"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="userInformation-wrapper">
+            <div class="userInformation">
+                <div class="userPic">
+                    <img id="userPic" src="../img/阿梓.jpg" >
+                </div>
+                <div class="userName">
+                    请登录
+                </div>
+                <div class="detailed">
+                    <div class="attentions">关注</div>
+                    <div class="line">|</div>
+                    <div class="followeds">粉丝</div>
+                    <div class="line">|</div>
+                    <div class="level">Lv.</div>
+                </div>
+            </div>
+        </div>
+        <div class="operates-wrapper">
+            <div class="operates">
+                <div class="user-like">我喜欢的</div>
+                <div class="user-lists">我的歌单</div>
+                <div class="user-radio">我的播客</div>
+                <div class="change-information">编辑信息</div>
+            </div>
+        </div>
+        <div class="inner-wrapper">
+            <div class="inner">
+                <div class="user-like-inner user-inner">
+                    <div class="inner-head">我喜欢的</div>
+                    <ul class="songs-wrapper">
+                    </ul>
+                </div>
+                <div class="user-lists-inner user-inner">
+                    <div class="inner-head">我的歌单</div>
+                    <ul class="lists-wrapper">
+                    </ul>
+                </div>
+                <div class="user-radio-inner user-inner">
+                    <div class="inner-head">我的播客</div>
+                    <ul class="radio-wrapper">
+                    </ul>
+                </div>
+                <div class="change-information-inner user-inner">
+                    <div class="inner-head">我的信息</div>
+                    <ul class="information-wrapper">
+                        <div class="gender"></div>
+                        <div class="birthday"></div>
+                        <div class="nickname"></div>
+                        <div class="signature"></div>
+                        <button class="change">修改个人信息</button>
+                    </ul>
+                    <ul class="change-information-wrapper">
+                        <form>
+                            性别:
+                            <input class="choice gender" id="gender" value="0" type="radio" name="gender">保密
+                            <input class="gender" value="1" type="radio" name="gender">男
+                            <input class="gender" value="2" type="radio" name="gender">女
+                        </form>
+                        <form>
+                            生日:
+                            <input id="birthday" class="input" type="text" placeholder="请输入出生日期,格式为2002-06-12">
+                        </form>
+                        <form>
+                            昵称:
+                            <input id="nickname" class="input" type="text" placeholder="请输入新昵称">
+                        </form>
+                        <form>
+                            签名:
+                            <input id="signature" class="input" type="text" placeholder="请输入新签名">
+                        </form>
+                        <button class="change-submit">提交</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper-background">
+            <div class="footer-wrapper">
+                <div class="statement">
+                    <div class="service">
+                        <a href="javascript:;">服务条款</a>
+                        <span>|</span>
+                        <a href="javascript:;">隐私政策</a>
+                        <span>|</span>
+                        <a href="javascript:;">儿童隐私条款</a>
+                        <span>|</span>
+                        <a href="javascript:;">版权投诉指引</a>
+                        <a href="javascript:;">联系我们</a>
+                        <span>|</span>
+                        <a href="javascript:;">广告合作</a>
+                        <span>|</span>
+                        <a href="javascript:;">廉正举报</a>
+                    </div>
+                    <div class="time">网易公司版权所有©1997-2022杭州乐读科技有限公司运营：浙网文[2021] 1186-054号
+                    </div>
+                    <div class="number"></div>
+                </div>
+                <div class="icon">
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>Amped Studio</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>用户认证</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>独立音乐人</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>赞赏</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>视频奖励</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="change-color">
+        <span>切换主题</span>
+        <div class="color-list">
+            <li id="black-red">经典红</li>
+            <li id="golden-blue">烫金蓝</li>
+            <li id="grey">精致灰</li>
+            <li id="space-blue">星空蓝</li>
+            <li id="green">清新绿</li>
+            <li id="rainbow">撞彩虹</li>
+            <li id="sunset-red">夕阳红</li>
+        </div>
+    </div>
+    <div class="shadow"></div>
+    <div id="hidden-menu" class="hidden-menu">
+        <li><i style="margin-right:8px;" class="fa fa-user"></i><a href="../html/selfPage.html">我的主页</a></li>
+        <li><i style="font-size:22px;" id="exit" class="fa fa-sign-out"></i><a class="exitLogin" href="javascript:;">退出登录</a></li>
+        <li id="close"><i style="left: -1px;" class="fa fa-close"></i><a href="javascript:;">关闭</a></li>
+    </div>
+    <div id="login2" class="login">
+        <div class="title">手机号登录</div>
+        <div class="inner">
+            <form>
+                <input id="phone" type="text" placeholder="请输入手机号" class="phone">
+                <input autocomplete="on" id="password" type="password" placeholder="请输入密码" class="password">
+            </form>
+            <button id="submit" class="submit">登录</button>
+        </div>
+    </div>
+</body>
+<script src="../js/base.js"></script>
+<script src="../js/onload.js"></script>
+<script src="../js/alert.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/selfPageLogin.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/user.js"></script>
+<script src="../js/selfPage.js"></script>
+<script src="../js/changeColor.js"></script>
+</html>

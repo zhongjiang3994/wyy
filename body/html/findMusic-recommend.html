@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recommend</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/recommendTop.css">
+    <link rel="stylesheet" href="../css/findMusic-recommend.css">
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../font/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/bottom.css">
+    <link rel="stylesheet" href="../css/play.css">
+    <link rel="stylesheet" href="../css/lrc.css">
+</head>
+
+<body>
+    <header>
+        <nav class="top-bar-wrapper">
+            <div class="top-bar-wrapper-background"></div>
+            <!-- 头部导航栏 -->
+            <div class="top-bar">
+                <h1 class="logo"></h1>
+                <ul class="menus-wrapper">
+                    <li class="find-music"><a href="javascript:;">发现音乐</a></li>
+                    <!-- 跳转个人主页 -->
+                    <li><a class="selfPage" href="javascript:;">个人主页</a></li>
+                    <li><a href="javascript:;">商城</a></li>
+                    <li><a href="javascript:;">音乐人</a></li>
+                    <li class="download">
+                        <a href="javascript:;">下载客户端</a>
+                        <!-- 隐藏二维码 -->
+                        <div class="code"><img
+                                src="https://p1.music.126.net/wCRnpjXHpGRiq1c1uCkIFQ==/109951164246717547.png" >
+                            <div>扫码下载</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="visitor">
+                    <div class="input-wrapper">
+                        <div class="search-box">
+                            <input type="text" class="search-input">
+                            <a href="javascript:;" class="search-btn">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <div class="searchResultWrapper">
+                            <ul class="songResultWrapper">
+                                <li class="resultHead">
+                                    单曲
+                                </li>
+                                <li class="resultBody">
+                                    <a href="javascript:;" class="songResult"></a>
+                                    <a href="javascript:;" class="songResult"></a>
+                                    <a href="javascript:;" class="songResult"></a>
+                                    <a href="javascript:;" class="songResult"></a>
+                                </li>
+                            </ul>
+                            <ul class="singerResultWrapper">
+                                <li class="resultHead">
+                                    歌手
+                                </li>
+                                <li class="resultBody">
+                                    <a href="javascript:;" class="singerResult"></a>
+                                    <a href="javascript:;" class="singerResult"></a>
+                                </li>
+                            </ul>
+                            <ul class="albumResultWrapper">
+                                <li class="resultHead">
+                                    专辑
+                                </li>
+                                <li class="resultBody">
+                                    <a href="javascript:;" class="albumResult"></a>
+                                    <a href="javascript:;" class="albumResult"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 隐藏菜单开关 -->
+                    <div id="avatar" class="avatar">
+                        <span id="login">登录</span>
+                        <img id="userAvatar">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="top-bar-bottom-wrapper">
+                <div class="top-bar-bottom">
+                    <ul class="topics">
+                        <li class="find-music-recommend"><a href="javascript:;">推荐</a></li>
+                        <!-- 跳转排行榜单 -->
+                        <li><a href="../html/findMusic-list.html">排行榜</a></li>
+                        <li><a href="javascript:;">歌单</a></li>
+                        <li><a href="javascript:;">主播电台</a></li>
+                        <!-- 跳转歌手页 -->
+                        <li><a href="javascript:;">歌手</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-wrapper-background">
+                <!-- 轮播图 -->
+                <div id="image-wrapper" class="image-wrapper">
+                    <div id="images" class="images">
+
+                    </div>
+                    <div class="left-angle">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    <div class="right-angle">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <ul id="min" class="min">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="imgBackground"></div>
+    <main>
+        <div class="main-wrapper-background">
+            <div class="main-wrapper">
+                <!-- 歌曲 -->
+                <div class="songs-wrapper">
+                    <div class="songs-recommend hot-recommend">
+                        <div class="songs-recommend-head">
+                            <div class="circle">
+                                <div class="inner-circle"></div>
+                            </div>
+                            <a class="songs-recommend-head-title" href="javascript:;">
+                                热门歌单
+                            </a>
+                            <a class="classname" href="javascript:;">华语</a>
+                            <span class="vertical">|</span>
+                            <a class="classname" href="javascript:;">流行</a>
+                            <span class="vertical">|</span>
+                            <a class="classname" href="javascript:;">摇滚</a>
+                            <span class="vertical">|</span>
+                            <a class="classname" href="javascript:;">民谣</a>
+                            <span class="vertical">|</span>
+                            <a class="classname" href="javascript:;">电子</a>
+                        </div>
+                        <!-- 轮播歌曲 -->
+                        <div class="songs-scroll">
+                            <ul class="item active">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                            <ul class="item">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                            <ul class="item">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                            <ul class="item">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                            <ul class="item">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover1" ></a>
+                                    <a id="listName1" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="songs-left" class="songs-left"><i class="fa fa-angle-left"></i></div>
+                        <div id="songs-right" class="songs-right"><i class="fa fa-angle-right"></i></div>
+                        <div class="songs-circle-list">
+                            <li class="songs-circle active" data-index="0"></li>
+                            <li class="songs-circle" data-index="1"></li>
+                            <li class="songs-circle" data-index="2"></li>
+                            <li class="songs-circle" data-index="3"></li>
+                            <li class="songs-circle" data-index="4"></li>
+                        </div>
+                    </div>
+                    <div class="songs-recommend self-recommend">
+                        <div class="songs-recommend-head">
+                            <div class="circle">
+                                <div class="inner-circle"></div>
+                            </div>
+                            <a class="songs-recommend-head-title" href="javascript:;">热门电台</a>
+                        </div>
+                        <div class="songs-scroll">
+                            <ul class="self-recommend-songs">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover2" ></a>
+                                    <a id="listName2" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="songs-recommend new-songs">
+                        <div class="songs-recommend-head">
+                            <div class="circle">
+                                <div class="inner-circle"></div>
+                            </div>
+                            <a class="songs-recommend-head-title" href="javascript:;">新碟上架</a>
+                        </div>
+                        <div class="songs-scroll">
+                            <ul class="new-recommend-songs">
+                                <li>
+                                    <a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                                <li><a class="songs-picture" href="javascript:;"><img id="listCover3" ></a>
+                                    <a id="listName3" href="javascript:;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 用户区域 -->
+                <aside>
+                    <div id="aside-user" class="user">
+                        <div class="avatar"><img id="userPic" ></div>
+                        <div class="information">
+                            <div id="userId" class="id"><a href="javascript:;">终将</a></div>
+                            <a class="level" href="javascript:;">LV.8</a>
+                            <div class="space">
+                                <li><a href="javascript:;">动态</a></li>
+                                <li>|</li>
+                                <li><a href="javascript:;">关注</a></li>
+                                <li>|</li>
+                                <li><a href="javascript:;">粉丝</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="aside-singers" class="aside-recommend singers">
+                        <div class="aside-recommend-head">
+                            <div class="left">我的收藏</div>
+                            <div class="right">查看全部<i class="fa fa-angle-right"></i></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="attentionSingerImg" >
+                                    <div id="attentionSingerName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="attentionSingerImg" >
+                                    <div id="attentionSingerName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="attentionSingerImg" >
+                                    <div id="attentionSingerName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="attentionSingerImg" >
+                                    <div id="attentionSingerName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="attentionSingerImg" >
+                                    <div id="attentionSingerName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aside-recommend anchors">
+                        <div class="aside-recommend-head">
+                            <div class="left">热门歌手</div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotSingerImg" >
+                                    <div id="hotSingerName" class="name"></div>
+                                    <div class="introduce">华语流行乐男歌手</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotSingerImg" >
+                                    <div id="hotSingerName" class="name"></div>
+                                    <div class="introduce">华语流行乐男歌手</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotSingerImg" >
+                                    <div id="hotSingerName" class="name"></div>
+                                    <div class="introduce">新生代流行乐男歌手</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotSingerImg" >
+                                    <div id="hotSingerName" class="name"></div>
+                                    <div class="introduce">中国内地流行乐男歌手</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotSingerImg" >
+                                    <div id="hotSingerName" class="name"></div>
+                                    <div class="introduce">中国内地流行乐男歌手</div>
+                                </a>
+                            </li>
+
+                            <li class="application"><a href="javascript:;"><button>申请成为网易音乐人</button></a></li>
+                        </ul>
+                    </div>
+                    <div class="aside-recommend cloud-musician">
+                        <div class="aside-recommend-head">
+                            <div class="left">热门主播</div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotAnchorImg" >
+                                    <div id="hotAnchorName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotAnchorImg" >
+                                    <div id="hotAnchorName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotAnchorImg" >
+                                    <div id="hotAnchorName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotAnchorImg" >
+                                    <div id="hotAnchorName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img class="hotAnchorImg" >
+                                    <div id="hotAnchorName" class="name"></div>
+                                    <div class="introduce"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper-background">
+            <div class="footer-wrapper">
+                <div class="statement">
+                    <div class="service">
+                        <a href="javascript:;">服务条款</a>
+                        <span>|</span>
+                        <a href="javascript:;">隐私政策</a>
+                        <span>|</span>
+                        <a href="javascript:;">儿童隐私条款</a>
+                        <span>|</span>
+                        <a href="javascript:;">版权投诉指引</a>
+                        <a href="javascript:;">联系我们</a>
+                        <span>|</span>
+                        <a href="javascript:;">广告合作</a>
+                        <span>|</span>
+                        <a href="javascript:;">廉正举报</a>
+                    </div>
+                    <div class="time">网易公司版权所有©1997-2022杭州乐读科技有限公司运营：浙网文[2021] 1186-054号
+                    </div>
+                    <div class="number"></div>
+                </div>
+                <div class="icon">
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>Am-ped Studio</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>用户认证</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>独立音乐人</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>赞赏</a>
+                    <a href="javascript:;"><i class="fa fa-angellist"></i>视频奖励</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 切换主题 -->
+    <div class="change-color">
+        <span>切换主题</span>
+        <div class="color-list">
+            <li id="black-red">经典红</li>
+            <li id="golden-blue">烫金蓝</li>
+            <li id="grey">精致灰</li>
+            <li id="space-blue">星空蓝</li>
+            <li id="green">清新绿</li>
+            <li id="rainbow">撞彩虹</li>
+            <li id="sunset-red">夕阳红</li>
+        </div>
+    </div>
+    <!-- 打开隐藏菜单时出现的阴影 -->
+    <div class="shadow"></div>
+    <!-- 隐藏菜单 -->
+    <div id="hidden-menu" class="hidden-menu">
+        <li><i style="margin-right:8px;" class="fa fa-user"></i><a href="../html/selfPage.html">我的主页</a></li>
+        <li><i style="font-size:22px;" id="exit" class="fa fa-sign-out"></i><a class="exitLogin" href="javascript:;">退出登录</a></li>
+        <li id="close"><i style="left: -1px;" class="fa fa-close"></i><a href="javascript:;">关闭</a></li>
+    </div>
+    <div id="login2" class="login">
+        <div class="title">手机号登录</div>
+        <div class="inner">
+            <form>
+                <input id="phone" type="text" placeholder="请输入手机号" class="phone">
+                <input autocomplete="on" id="password" type="password" placeholder="请输入密码" class="password">
+            </form>
+            <button id="submit" class="submit">登录</button>
+        </div>
+    </div>
+</body>
+<script src="../js/base.js"></script>
+<script src="../js/onload.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/banner1.js"></script>
+<script src="../js/recommendLogin.js"></script>
+<script src="../js/alert.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/songsList.js"></script>
+<script src="../js/banner2.js"></script>
+<script src="../js/aside.js"></script>
+<script src="../js/changeColor.js"></script>
+</html>

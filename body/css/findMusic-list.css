@@ -1,0 +1,208 @@
+.list-wrapper {
+  width: 100vw;
+  min-width: 982px;
+  margin: 0 auto;
+  height: 1000px;
+}
+.list-wrapper .list {
+  width: 982px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 1000px;
+  display: flex;
+}
+.list-wrapper .list aside {
+  border-right: 2px solid rgba(131, 131, 131, 0.8);
+  width: 220px;
+}
+.list-wrapper .list aside .list-head {
+  height: 50px;
+  width: 220px;
+  font-size: 20px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+.list-wrapper .list aside .songs-list-list {
+  width: 220px;
+}
+.list-wrapper .list aside .songs-list-list li {
+  cursor: pointer;
+  height: 62.5px;
+  padding: 10px;
+  width: 217px;
+  position: relative;
+  background-color: #f4f2f2;
+  margin-bottom: 10px;
+}
+.list-wrapper .list aside .songs-list-list li:hover {
+  background-color: #bebebe;
+}
+.list-wrapper .list aside .songs-list-list li img {
+  width: 40px;
+  height: 40px;
+}
+.list-wrapper .list aside .songs-list-list li .title {
+  position: absolute;
+  top: 13px;
+  left: 60px;
+}
+.list-wrapper .list aside .songs-list-list li .buff {
+  position: absolute;
+  bottom: 12px;
+  left: 60px;
+}
+.list-wrapper .list aside .global-list {
+  display: block;
+}
+.list-wrapper .list .main-wrapper {
+  width: 762px;
+  height: 1000px;
+}
+.list-wrapper .list .main-wrapper .main-head {
+  width: 762px;
+  height: 240px;
+  padding: 40px;
+}
+.list-wrapper .list .main-wrapper .main-head .cover {
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+.list-wrapper .list .main-wrapper .main-head .cover img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.list-wrapper .list .main-wrapper .main-head .information {
+  width: 500px;
+  float: right;
+  height: 160px;
+}
+.list-wrapper .list .main-wrapper .main-head .information .title {
+  padding: 10px;
+  font-size: 25px;
+}
+.list-wrapper .list .main-wrapper .main-head .information .time {
+  padding: 10px;
+}
+.list-wrapper .list .main-wrapper .main-head .information .button {
+  padding: 10px;
+}
+.list-wrapper .list .main-wrapper .main-head .information .button button {
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list-wrapper .list .main-wrapper .main-head .information .button button:hover {
+  background-color: #9c9c9c;
+}
+.list-wrapper .list .main-wrapper .main-head .information .button .join {
+  position: relative;
+  left: -11px;
+  font-size: 15px;
+  margin-right: 0;
+}
+.list-wrapper .list .main-wrapper .songs-list {
+  width: 762px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-head {
+  width: 762px;
+  padding: 0 40px;
+  height: 40px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-head .title {
+  line-height: 40px;
+  float: left;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-head .title span {
+  font-size: 25px;
+  margin-right: 20px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-head .play {
+  float: right;
+  line-height: 40px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner {
+  width: 762px;
+  padding: 40px;
+  overflow: auto;
+  height: 700px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner .information {
+  display: flex;
+  border: 2px solid #a7a7a7;
+  border-top: 3px solid #c20c0c;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner .information .none {
+  width: 10%;
+  height: 31px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner .information .title {
+  font-size: 20px;
+  width: 45%;
+  padding-top: 5px;
+  padding-left: 2px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner .information .longer {
+  font-size: 20px;
+  width: 15%;
+  padding-top: 5px;
+  padding-left: 2px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner .information .singer {
+  font-size: 20px;
+  width: 30%;
+  padding-left: 2px;
+  padding-top: 5px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li {
+  padding: 5px;
+  display: flex;
+  background-color: #fff;
+  border-left: 2px solid rgba(167, 167, 167, 0.7);
+  border-right: 2px solid rgba(167, 167, 167, 0.7);
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li:nth-child(even) {
+  background-color: rgba(247, 247, 247, 0.7);
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .number {
+  width: 10%;
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .number i {
+  float: right;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .number i {
+  color: #b72228;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .name {
+  cursor: pointer;
+  width: 45%;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .name i {
+  color: #b2b2b2;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .name:hover i {
+  color: #626262;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .how-long {
+  width: 15%;
+  padding-top: 5px;
+  padding-left: 2px;
+  font-size: 20px;
+}
+.list-wrapper .list .main-wrapper .songs-list .songs-list-inner li .team {
+  width: 30%;
+  padding-left: 2px;
+  padding-top: 5px;
+  font-size: 20px;
+}
+.find-music-music {
+  background-color: #9b0909;
+}

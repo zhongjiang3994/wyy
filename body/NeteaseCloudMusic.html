@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/lrc.css">
+    <link rel="stylesheet" href="./css/play.css">
+    <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/NeteaseCloudMusic.css">
+</head>
+
+<body>
+    <iframe src="./html/findMusic-recommend.html" id="frame_content" scrolling="no" frameborder="0"
+        onload="this.height=this.contentWindow.document.documentElement.scrollHeight">
+    </iframe>
+    <div class="back-top-wrapper">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <div class="music-container" id="music-container">
+        <div class="music-info">
+            <h4 id="title"></h4>
+            <div class="wrappers">
+                <div id="wrapper" class="wrapper">
+                    <div id="progress">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio src="./music/初弦__ - 「沃伦姆德的薄暮」小镇.mp3" id="audio"></audio>
+        <div class="img-container">
+            <img src="./img/阿梓.jpg" alt="music-cover" id="music-cover">
+        </div>
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fa fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fa fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fa fa-forward"></i>
+            </button>
+        </div>
+        <div class="lrc" id="music"></div>
+    </div>
+    <div class="history">
+        <span>播放列表</span>
+    </div>
+</body>
+<script src="./js/base.js"></script>
+<script src="./js/onload.js"></script>
+<script src="./js/play.js"></script>
+<script src="./js/lrc.js"></script>
+<script src="./js/scrollTo.js"></script>
+
+</html>

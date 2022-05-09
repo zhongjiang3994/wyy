@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <p id="11" class="22"></p>
+        </li>
+    </ul>
+</body>
+<script>
+    console.log(a)
+    let a=0;
+    // 没有变量提升
+    if(1==1){
+        let b=10;
+    }
+    console.log(b)
+    //块作用域
+    //不能重复声明
+    //不污染全局变量
+    const c=1
+    //不能修改,但可以改变其属性的值
+    let htmlStr =`
+    <ul>
+        <li>
+            <p id=${a}class=${b}></p>
+        </li>
+    </ul>`
+    // 模板字符串
+</script>
+</html>
